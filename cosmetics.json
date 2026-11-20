@@ -1,0 +1,17 @@
+{
+    "format": 1,
+    "items": [
+        {
+            "id": "christmas",
+            "type": "hat",
+            "name": "Christmas Hat",
+            "picture": "hats/christmas.png",
+            "width": 0.51,
+            "sink": 0.47,
+            "shift": -0.52,
+            "owners": [
+                "76561199438881251"
+            ]
+        }
+    ]
+}
