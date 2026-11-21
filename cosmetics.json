@@ -6,9 +6,9 @@
             "type": "hat",
             "name": "Christmas Hat",
             "picture": "hats/christmas.png",
-            "width": 0.51,
-            "sink": 0.47,
-            "shift": -0.52,
+            "width": 0.82,
+            "sink": 0.5,
+            "shift": -0.26,
             "owners": [
                 "76561199438881251"
             ]
