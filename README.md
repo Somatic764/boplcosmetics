@@ -38,6 +38,7 @@ To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone.
     "sink": 0.4,
     "shift": 0,
     "runTilt": 0,
+    "runSink": 0,
     "owners": ["76561199438881251"]
 }
 ```
@@ -52,6 +53,7 @@ To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone.
 | `sink` | How much of the hat's height sits below the top of the head (0 = on top, 0.5 = half pulled down). |
 | `shift` | How far it sits ahead of the eyes' middle, as a share of its own width (below 0 = towards the back). |
 | `runTilt` | Degrees the hat leans while the slime runs: above 0 tips it back to follow the running body, below 0 tips it forward, 0 (or left out) keeps it level. Needs Bopl Cosmetics 1.2.2 or newer; older versions keep it level. |
+| `runSink` | How much lower the hat sits while the slime runs, as a share of its height (the running head is lower under the hat; the Christmas Hat uses 0.2 with its 20° lean). Needs Bopl Cosmetics 1.2.3 or newer. |
 | `owners` | Who can wear it: Steam IDs, or `"*"` for everyone. |
 
 ## Notes

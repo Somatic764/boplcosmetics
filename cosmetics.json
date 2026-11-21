@@ -9,6 +9,8 @@
             "width": 0.82,
             "sink": 0.5,
             "shift": -0.26,
+            "runTilt": 20,
+            "runSink": 0.2,
             "owners": [
                 "76561199438881251"
             ]
