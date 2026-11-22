@@ -6,9 +6,9 @@ reaches everyone the next time they start the game. No mod update is needed.
 
 This repository must stay **public**, or the mod can't download it.
 
-## Giving someone a hat
+## Giving someone a hat or colour
 
-Add their Steam ID to the hat's `owners`. A Steam ID is the 17-digit number in a Steam profile
+Add their Steam ID to the item's `owners`. A Steam ID is the 17-digit number in a Steam profile
 link (`steamcommunity.com/profiles/76561199438881251`). If someone has a custom profile link
 (`steamcommunity.com/id/name`), look their number up on a site such as steamid.io.
 
@@ -19,8 +19,8 @@ link (`steamcommunity.com/profiles/76561199438881251`). If someone has a custom 
 ]
 ```
 
-To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone, and
-`"owners": []` to nobody (the hat stays in the list, ready to give out again).
+To take it away, remove their ID. `"owners": ["*"]` gives it to everyone, and
+`"owners": []` to nobody (it stays in the list, ready to give out again).
 
 ## Adding a hat
 
@@ -47,7 +47,7 @@ To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone, 
 | Field | What it does |
 | --- | --- |
 | `id` | A short name: small letters, digits and dashes, never changed once people wear it. |
-| `type` | `hat` (later versions of the mod will add more types). |
+| `type` | `hat` (or `color`, see below). |
 | `name` | What the hat grid shows. |
 | `picture` | The picture's path in this repository. |
 | `width` | The hat's width as a share of the slime's width (Christmas Hat 0.82, Traffic Cone 0.8, Propeller Cap 0.95). |
@@ -57,10 +57,43 @@ To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone, 
 | `runSink` | How much lower the hat sits while the slime runs, as a share of its height (the Christmas Hat uses 0.2). Used by Bopl Cosmetics 1.2.3; from 1.2.4 a leaning hat rests on the head by itself in every running frame, and `runSink` is only a fallback. Set it to a small number besides `runTilt` to switch the running pose on without a lean. |
 | `owners` | Who can wear it: Steam IDs, or `"*"` for everyone. |
 
+## Adding a colour (a flag, say)
+
+Colours need Bopl Cosmetics 1.4.0 or newer; older versions skip them, and friends on those see the
+player in their normal colour.
+
+1. Put the picture in `colors/`, for example `colors/sweden.png`. It's stretched over the slime's
+   body in every frame (left edge of the picture on the left of the body, top on top), so draw it
+   the shape of a flag, for example 220 x 160 pixels. At most 1024 pixels each way and 1 MB.
+   See-through parts show as white.
+2. Add an item to `items` in `cosmetics.json`:
+
+```json
+{
+    "id": "sweden",
+    "type": "color",
+    "name": "Sweden",
+    "picture": "colors/sweden.png",
+    "owners": ["*"]
+}
+```
+
+| Field | What it does |
+| --- | --- |
+| `id` | A short name: small letters, digits and dashes, never changed once people wear it. Not `normal`, `rainbow` or `norway` (those are built in). |
+| `type` | `color`. |
+| `name` | What the mod's log calls it. |
+| `picture` | The picture's path in this repository. |
+| `owners` | Who can wear it: Steam IDs, `"*"` for everyone, or `[]` for nobody. |
+
+In the lobby, a colour is one more stop on the colour arrows after Rainbow and Norway, for the
+players who own it. The slime's outline, eyes and mouth stay as they are, and when it faces left
+the picture is mirrored with it.
+
 ## Notes
 
-- Only the owners can pick a hat, and everyone else's game only shows it on its owners, so
-  nobody can show off someone else's hat by editing their settings.
+- Only the owners can pick a hat or colour, and everyone else's game only shows it on its owners,
+  so nobody can show off someone else's by editing their settings.
 - Anyone can read this repository, including the owners' Steam IDs.
 - GitHub can take a few minutes to serve a changed file, so a change may need a second game start.
 - If the list has a mistake, the mod leaves out the broken item and says why in its log
