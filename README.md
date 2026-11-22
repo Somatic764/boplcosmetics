@@ -80,14 +80,31 @@ player in their normal colour.
 
 | Field | What it does |
 | --- | --- |
-| `id` | A short name: small letters, digits and dashes, never changed once people wear it. Not `normal`, `rainbow` or `norway` (those are built in). |
+| `id` | A short name: small letters, digits and dashes, never changed once people wear it. Not `normal` or `rainbow` (built in), and `norway` only for Norway's owners item below. |
 | `type` | `color`. |
 | `name` | What the mod's log calls it. |
 | `picture` | The picture's path in this repository. |
 | `owners` | Who can wear it: Steam IDs, `"*"` for everyone, or `[]` for nobody. |
 
-In the lobby, a colour is one more stop on the colour arrows after Rainbow and Norway, for the
-players who own it. The slime's outline, eyes and mouth stay as they are, and when it faces left
+In the lobby, a colour is one more stop on the colour arrows after Rainbow (and Norway), for the
+players who own it.
+
+### Norway
+
+Norway is drawn by the mod itself (from Bopl Cosmetics 1.5.0 it's personal too), so its item has no
+picture, only its owners:
+
+```json
+{
+    "id": "norway",
+    "type": "color",
+    "name": "Norway",
+    "owners": ["76561199805191658"]
+}
+```
+
+Without this item nobody has Norway. (Versions 1.3.0 to 1.4.1 give Norway to everyone and note in
+their log that they don't understand this item; that's harmless.) The slime's outline, eyes and mouth stay as they are, and when it faces left
 the picture is mirrored with it.
 
 ## Notes

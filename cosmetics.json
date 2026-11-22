@@ -24,25 +24,48 @@
             "owners": []
         },
         {
+            "id": "norway",
+            "type": "color",
+            "name": "Norway",
+            "owners": [
+                "76561199805191658"
+            ]
+        },
+        {
             "id": "morocco",
             "type": "color",
             "name": "Morocco",
             "picture": "colors/morocco.png",
-            "owners": ["*"]
+            "owners": [
+                "76561199836998579"
+            ]
         },
         {
             "id": "israel",
             "type": "color",
             "name": "Israel",
             "picture": "colors/israel.png",
-            "owners": ["*"]
+            "owners": [
+                "76561199385180231"
+            ]
         },
         {
             "id": "usa",
             "type": "color",
             "name": "USA",
             "picture": "colors/usa.png",
-            "owners": ["*"]
+            "owners": [
+                "76561199805191658"
+            ]
+        },
+        {
+            "id": "russia",
+            "type": "color",
+            "name": "Russia",
+            "picture": "colors/russia.png",
+            "owners": [
+                "76561199438881251"
+            ]
         }
     ]
 }
