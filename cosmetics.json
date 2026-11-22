@@ -20,7 +20,7 @@
             "type": "hat",
             "name": "Halo",
             "picture": "hats/halo.png",
-            "width": 0.77,
+            "width": 0.712,
             "sink": 0,
             "shift": -0.04,
             "owners": [
