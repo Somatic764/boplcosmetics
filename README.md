@@ -19,7 +19,8 @@ link (`steamcommunity.com/profiles/76561199438881251`). If someone has a custom 
 ]
 ```
 
-To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone.
+To take a hat away, remove their ID. `"owners": ["*"]` gives a hat to everyone, and
+`"owners": []` to nobody (the hat stays in the list, ready to give out again).
 
 ## Adding a hat
 
