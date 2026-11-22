@@ -29,6 +29,20 @@
             "name": "Morocco",
             "picture": "colors/morocco.png",
             "owners": ["*"]
+        },
+        {
+            "id": "israel",
+            "type": "color",
+            "name": "Israel",
+            "picture": "colors/israel.png",
+            "owners": ["*"]
+        },
+        {
+            "id": "usa",
+            "type": "color",
+            "name": "USA",
+            "picture": "colors/usa.png",
+            "owners": ["*"]
         }
     ]
 }
