@@ -86,6 +86,15 @@
             "owners": [
                 "76561199438881251"
             ]
+        },
+        {
+            "id": "uzbekistan",
+            "type": "color",
+            "name": "Uzbekistan",
+            "picture": "colors/uzbekistan.png",
+            "owners": [
+                "76561199127323293"
+            ]
         }
     ]
 }
