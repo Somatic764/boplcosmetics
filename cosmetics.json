@@ -62,6 +62,7 @@
             "type": "color",
             "name": "Israel",
             "picture": "colors/israel.png",
+            "arrow": "#ffffff",
             "owners": [
                 "76561199385180231"
             ]
@@ -71,6 +72,7 @@
             "type": "color",
             "name": "USA",
             "picture": "colors/usa.png",
+            "arrow": "#ffffff",
             "owners": [
                 "76561199805191658"
             ]
@@ -80,6 +82,7 @@
             "type": "color",
             "name": "Russia",
             "picture": "colors/russia.png",
+            "arrow": "#0039a6",
             "owners": [
                 "76561199438881251"
             ]

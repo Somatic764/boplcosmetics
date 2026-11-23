@@ -111,6 +111,7 @@ player in their normal colour.
 | `name` | What the mod's log calls it. |
 | `picture` | The picture's path in this repository. |
 | `owners` | Who can wear it: Steam IDs, `"*"` for everyone, or `[]` for nobody. |
+| `arrow` | Optional: the colour of the arrows shot from the bow, written `"#rrggbb"`, for example `"#0039a6"` (blue) or `"#ffffff"` (white). Without it they're the flag's main colour: the colour covering most of the picture, white left out. The bow itself always shows the whole flag. Needs Bopl Cosmetics 1.6.5 or newer; older versions ignore it. |
 
 In the lobby, a colour is one more stop on the colour arrows after Rainbow (and Norway), for the
 players who own it.
@@ -129,7 +130,7 @@ picture, only its owners:
 }
 ```
 
-Without this item nobody has Norway. (Versions 1.3.0 to 1.4.1 give Norway to everyone and note in
+It can have an `arrow` colour too (without one, Norway's arrows are red). Without this item nobody has Norway. (Versions 1.3.0 to 1.4.1 give Norway to everyone and note in
 their log that they don't understand this item; that's harmless.) The slime's outline, eyes and mouth stay as they are, and when it faces left
 the picture is mirrored with it.
 
