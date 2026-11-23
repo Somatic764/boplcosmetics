@@ -47,7 +47,7 @@ To take it away, remove their ID. `"owners": ["*"]` gives it to everyone, and
 | Field | What it does |
 | --- | --- |
 | `id` | A short name: small letters, digits and dashes, never changed once people wear it. |
-| `type` | `hat` (or `color`, see below). |
+| `type` | `hat` (or `glasses` or `color`, see below). |
 | `name` | What the hat grid shows. |
 | `picture` | The picture's path in this repository. |
 | `width` | The hat's width as a share of the slime's width (Christmas Hat 0.82, Traffic Cone 0.8, Propeller Cap 0.95). |
@@ -56,6 +56,32 @@ To take it away, remove their ID. `"owners": ["*"]` gives it to everyone, and
 | `runTilt` | Degrees the hat leans while the slime runs: above 0 tips it back to follow the running body, below 0 tips it forward, 0 (or left out) keeps it level. Needs Bopl Cosmetics 1.2.2 or newer; older versions keep it level. |
 | `runSink` | How much lower the hat sits while the slime runs, as a share of its height (the Christmas Hat uses 0.2). Used by Bopl Cosmetics 1.2.3; from 1.2.4 a leaning hat rests on the head by itself in every running frame, and `runSink` is only a fallback. Set it to a small number besides `runTilt` to switch the running pose on without a lean. |
 | `owners` | Who can wear it: Steam IDs, or `"*"` for everyone. |
+
+## Adding glasses
+
+Glasses need Bopl Cosmetics 1.6.0 or newer; older versions skip them.
+
+1. Put the picture in `glasses/`, for example `glasses/round.png`: a PNG with a see-through
+   background, drawn on the slime standing and facing right (so the lens on the left is the near,
+   bigger one), cut tightly around the glasses, at most 1024 pixels each way and 1 MB.
+2. Find the two eye points: where the middle of the slime's back (left) eye and front (right) eye
+   go in the picture, each as `[across, down]`, shares of the picture's width and height from its top
+   left (0 to 1). The mod turns, sizes and moves the picture so these land on the eyes in every frame.
+3. Add an item to `items` in `cosmetics.json`:
+
+```json
+{
+    "id": "round",
+    "type": "glasses",
+    "name": "Round Glasses",
+    "picture": "glasses/round.png",
+    "backEye": [0.4096, 0.567],
+    "frontEye": [0.8391, 0.3692],
+    "owners": ["*"]
+}
+```
+
+They're picked in the lobby's hat grid, after the hats, and worn besides a hat.
 
 ## Adding a colour (a flag, say)
 

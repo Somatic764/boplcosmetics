@@ -24,6 +24,23 @@
             "owners": []
         },
         {
+            "id": "round",
+            "type": "glasses",
+            "name": "Round Glasses",
+            "picture": "glasses/round.png",
+            "backEye": [
+                0.4096,
+                0.567
+            ],
+            "frontEye": [
+                0.8391,
+                0.3692
+            ],
+            "owners": [
+                "*"
+            ]
+        },
+        {
             "id": "norway",
             "type": "color",
             "name": "Norway",
