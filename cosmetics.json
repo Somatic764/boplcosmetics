@@ -104,6 +104,15 @@
             "owners": [
                 "76561199436063606"
             ]
+        },
+        {
+            "id": "australia",
+            "type": "color",
+            "name": "Australia",
+            "picture": "colors/australia.png",
+            "owners": [
+                "76561199436063606"
+            ]
         }
     ]
 }
