@@ -95,6 +95,15 @@
             "owners": [
                 "76561199127323293"
             ]
+        },
+        {
+            "id": "china",
+            "type": "color",
+            "name": "China",
+            "picture": "colors/china.png",
+            "owners": [
+                "76561199436063606"
+            ]
         }
     ]
 }
